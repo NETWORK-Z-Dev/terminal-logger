@@ -8,6 +8,7 @@ This small library was designed for NodeJS and to bring pretty logs to the termi
 - `Logger.success` prints in green
 - `Logger.debug` will only print if `Logger.logDebug` is set to true and on default in a bright black color.
 - `Logger.log` can be used to print custom "levels", which is whats shown in the `[ ]` brackets, like `INFO`, `SUCCESS` and more.
+- `Logger.space` will print emty lines and supports a number argument to print multiple empty lines without spamming `Logger.space` lines or `console.log` and can be done with `Logger.space(2)` for two empty lines or more.
 
 ![image-20260116014526091](./assets/image-20260116014526091.png)
 
