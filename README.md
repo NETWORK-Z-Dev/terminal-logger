@@ -26,7 +26,7 @@ Logger.success("Content")
 Logger.error("Content")
 ```
 
-![image-20260116015557446](./assets/image-20260116015557446.png)****
+![image-20260116015557446](./assets/image-20260116015557446.png)
 
 ### Printing objects
 
