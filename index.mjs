@@ -1,4 +1,5 @@
 import fs from "fs";
+import util from "util";
 
 export default class Logger {
     static logDebug = false;
@@ -36,6 +37,13 @@ export default class Logger {
         if (message instanceof Error) {
             Logger.printErrorWithFrame(level, message, color);
             return;
+        }
+
+        if (typeof message === "object") {
+            message = util.inspect(message, {
+                depth: null,
+                colors: false
+            });
         }
 
         console.log(
