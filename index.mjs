@@ -1,5 +1,4 @@
 import fs from "fs";
-import util from "util";
 
 export default class Logger {
     static logDebug = false;
@@ -39,15 +38,10 @@ export default class Logger {
             return;
         }
 
-        if (typeof message === "object") {
-            message = util.inspect(message, {
-                depth: null,
-                colors: false
-            });
-        }
-
         console.log(
-            `${color}${Logger.displayDate()}[${level}] ${message}${Logger.colors.reset}`
+            `${color}${Logger.displayDate()}[${level}]`,
+            message,
+            Logger.colors.reset
         );
     }
 
@@ -94,7 +88,6 @@ export default class Logger {
             console.log(`${color}${l}${reset}`);
         }
     }
-
 
     static space(amount = 1) {
         for (let i = 0; i < amount; i++) console.log(" ");
